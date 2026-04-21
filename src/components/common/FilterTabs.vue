@@ -34,22 +34,23 @@ defineEmits<{
 <style scoped>
 .tabs {
   display: flex;
-  gap: 6px;
+  gap: 4px;
   overflow-x: auto;
-  padding: 2px;
+  padding: 3px;
   background: var(--color-surface);
   border-radius: var(--radius-full);
   border: 1px solid var(--color-border-light);
   box-shadow: var(--shadow-sm);
 }
 .tab {
-  flex: 1 0 auto;
-  min-height: 36px;
-  padding: 0 16px;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 34px;
+  padding: 0 10px;
   border: none;
   background: transparent;
   border-radius: var(--radius-full);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   cursor: pointer;
   white-space: nowrap;
@@ -57,9 +58,9 @@ defineEmits<{
   transition: background-color 0.15s, color 0.15s;
 }
 .tab.active {
-  background: var(--color-primary);
+  background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
   color: #fff;
   font-weight: 600;
-  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 2px 6px rgba(30, 58, 138, 0.35);
 }
 </style>

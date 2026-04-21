@@ -193,10 +193,10 @@ function onClearAll(): void {
     <header class="header">
       <div class="header-top">
         <div class="brand">
-          <div class="brand-icon">🍎</div>
+          <div class="brand-icon">🍽</div>
           <div class="brand-text">
             <h1>썩기 전에 먹자</h1>
-            <p class="brand-sub">오늘도 신선하게</p>
+            <p class="brand-sub">썩히면 돈이 운다</p>
           </div>
         </div>
         <button class="menu-btn" type="button" @click="showMenu = !showMenu" aria-label="메뉴">
@@ -239,7 +239,7 @@ function onClearAll(): void {
         />
       </div>
 
-      <div class="filter-group">
+      <div class="filter-row">
         <FilterTabs v-model="locationFilter" :options="locationOptions" />
         <FilterTabs v-model="statusFilter" :options="statusOptions" />
       </div>
@@ -293,7 +293,7 @@ function onClearAll(): void {
 .header {
   position: sticky;
   top: 0;
-  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
   padding: calc(var(--safe-top) + 16px) 20px 20px;
   z-index: 10;
   color: #fff;
@@ -391,7 +391,7 @@ function onClearAll(): void {
 /* 검색 */
 .search-wrap {
   position: relative;
-  margin: 14px 0 12px;
+  margin: 14px 0 10px;
 }
 .search-icon {
   position: absolute;
@@ -404,10 +404,10 @@ function onClearAll(): void {
 }
 .search {
   width: 100%;
-  padding: 13px 14px 13px 40px;
+  padding: 12px 14px 12px 40px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  font-size: 15px;
+  font-size: 14px;
   background: var(--color-surface);
   box-shadow: var(--shadow-sm);
   outline: none;
@@ -418,11 +418,16 @@ function onClearAll(): void {
   box-shadow: 0 0 0 3px var(--color-primary-light);
 }
 
-.filter-group {
-  display: flex;
-  flex-direction: column;
+/* 필터 (한 줄) */
+.filter-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
   margin-bottom: 16px;
+}
+
+@media (max-width: 380px) {
+  .filter-row { grid-template-columns: 1fr; }
 }
 
 /* 목록 */
@@ -453,7 +458,7 @@ function onClearAll(): void {
   height: 60px;
   border-radius: 50%;
   border: none;
-  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
   color: #fff;
   box-shadow: var(--shadow-fab);
   cursor: pointer;

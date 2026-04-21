@@ -13,7 +13,7 @@ defineProps<{
 <template>
   <div class="summary">
     <div class="cell total">
-      <div class="cell-icon">📦</div>
+      <div class="cell-icon">🍱</div>
       <div class="cell-content">
         <div class="value">{{ total }}</div>
         <div class="label">전체</div>
@@ -27,7 +27,7 @@ defineProps<{
       </div>
     </div>
     <div class="cell danger">
-      <div class="cell-icon">⚠</div>
+      <div class="cell-icon">🚮</div>
       <div class="cell-content">
         <div class="value">{{ expired }}</div>
         <div class="label">만료</div>
@@ -75,7 +75,7 @@ defineProps<{
   border-radius: var(--radius-sm);
   flex-shrink: 0;
 }
-.cell.total .cell-icon { background: var(--color-primary-light); }
+.cell.total .cell-icon { background: var(--color-primary-soft); }
 .cell.warn .cell-icon { background: var(--color-soon-bg); }
 .cell.danger .cell-icon { background: var(--color-expired-bg); }
 

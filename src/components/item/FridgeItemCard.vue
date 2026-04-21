@@ -33,8 +33,8 @@ const statusLabel = computed(() => {
 // 위치별 아이콘
 const locationIcon = computed(() => {
   if (props.item.location === '냉장') return '🧊';
-  if (props.item.location === '냉동') return '❄';
-  return '🌡';
+  if (props.item.location === '냉동') return '❄️';
+  return '☀️';
 });
 
 /**

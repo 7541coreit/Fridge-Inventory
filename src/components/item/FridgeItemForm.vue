@@ -313,10 +313,10 @@ h2 {
   letter-spacing: -0.2px;
 }
 .btn-save {
-  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
   color: #fff;
   flex: 2;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
 }
 .btn-delete {
   background: var(--color-expired-bg);
