@@ -193,9 +193,9 @@ function onClearAll(): void {
     <header class="header">
       <div class="header-top">
         <div class="brand">
-          <div class="brand-icon">❄</div>
+          <div class="brand-icon">🍎</div>
           <div class="brand-text">
-            <h1>냉장고 재고</h1>
+            <h1>썩기 전에 먹자</h1>
             <p class="brand-sub">오늘도 신선하게</p>
           </div>
         </div>
@@ -207,10 +207,10 @@ function onClearAll(): void {
       <div v-if="showMenu" class="menu-backdrop" @click="showMenu = false"></div>
       <div v-if="showMenu" class="menu-dropdown">
         <button type="button" class="menu-item" @click="onExport">
-          <span class="menu-ico">⬇</span>JSON 내보내기
+          <span class="menu-ico">⬇</span>파일 내보내기
         </button>
         <button type="button" class="menu-item" @click="onClickImport">
-          <span class="menu-ico">⬆</span>JSON 불러오기
+          <span class="menu-ico">⬆</span>파일 불러오기
         </button>
         <div class="menu-divider"></div>
         <button type="button" class="menu-item danger" @click="onClearAll">
